@@ -10,6 +10,8 @@
             "includePath": [
                 "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/include",
                 "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/src",
+                "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
+                "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/.pio/libdeps/esp32-s3-wroom-1-n8r8/Madgwick/src",
                 "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/.pio/libdeps/esp32-s3-wroom-1-n8r8/LPS",
                 "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/.pio/libdeps/esp32-s3-wroom-1-n8r8/Adafruit ICM20X",
                 "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/.pio/libdeps/esp32-s3-wroom-1-n8r8/Adafruit Unified Sensor",
@@ -244,7 +246,6 @@
                 "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/USB/src",
                 "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
                 "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
-                "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                 "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
                 ""
@@ -254,6 +255,8 @@
                 "path": [
                     "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/include",
                     "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/src",
+                    "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
+                    "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/.pio/libdeps/esp32-s3-wroom-1-n8r8/Madgwick/src",
                     "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/.pio/libdeps/esp32-s3-wroom-1-n8r8/LPS",
                     "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/.pio/libdeps/esp32-s3-wroom-1-n8r8/Adafruit ICM20X",
                     "C:/Users/Muhiedin/Documents/PlatformIO/Projects/Astra/.pio/libdeps/esp32-s3-wroom-1-n8r8/Adafruit Unified Sensor",
@@ -488,14 +491,13 @@
                     "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/USB/src",
                     "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
                     "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
-                    "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                     "C:/Users/Muhiedin/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
                     ""
                 ]
             },
             "defines": [
-                "PLATFORMIO=60119",
+                "PLATFORMIO=60200",
                 "ARDUINO_ESP32S3_DEV",
                 "ARDUINO_RUNNING_CORE=1",
                 "ARDUINO_EVENT_RUNNING_CORE=1",

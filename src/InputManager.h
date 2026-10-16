@@ -7,6 +7,7 @@
 #include <Wire.h>
 #include <Helpers.h>
 #include <ESP32Servo.h>
+#include <MadgwickAHRS.h>
 
 class InputManager
 {
@@ -19,6 +20,7 @@ private:
     float gyroXOffset = 0.0f;
     float gyroYOffset = 0.0f;
     float gyroZOffset = 0.0f;
+    Madgwick filter;
     Servo m1;
     Servo m2;
     Servo m3;
@@ -33,8 +35,6 @@ public:
     float getTemperatureICM();
     Orientation getOrientation();
     Orientation sensorFusion();
-    void setMotor(float speed, Servo motor);
     void setMotors(Motors motors);
     void updateICM();
-    Orientation getGoal();
 };

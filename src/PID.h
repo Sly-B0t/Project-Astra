@@ -2,46 +2,28 @@
 
 #include <Helpers.h>
 
-struct PIDGains
-{
-    float kp;
-    float ki;
-    float kd;
-};
-
-struct PIDState
-{
-    float integral;
-    float previousError;
-};
-
 class PID
 {
 private:
-    Orientation goalOrientation;
-    Orientation actualOrientation;
-    Motors motorThrust;
-    unsigned long previousUpdateMicros;
+    float goal;
+    float truth;
+    float errorSum;
+    float lastTime;
+    float lastTruth;
+    float output;
 
-    PIDState rollState;
-    PIDState pitchState;
-    PIDState yawState;
-    PIDState altitudeState;
-
-    static constexpr float escMinUs = 1000.0f;
-    static constexpr float escMaxUs = 2000.0f;
-    static constexpr float idleThrottleUs = 1000.0f;
-    static constexpr float hoverThrottleUs = 1350.0f;
-
-    static constexpr float attitudeCorrectionLimitUs = 420.0f;
-    static constexpr float yawCorrectionLimitUs = 320.0f;
-    static constexpr float altitudeCorrectionLimitUs = 250.0f;
-    static constexpr float integralLimit = 120.0f;
+    // coefficents
+    float kp;
+    float ki;
+    float kd;
 
 public:
-    PID();
+    PID(float p, float i, float d);
     ~PID();
-    Motors getMotorThrust();
-    void setOrientation(Orientation goal, Orientation Actual);
-    void updatePID();
+    void setPoints(float g, float t);
+    void setTunings(float p, float i, float d);
+    void setTuningTerm(uint8_t term, float value);
+    float getTuningTerm(uint8_t term) const;
+    void reset();
+    float updatePID();
 };
