@@ -2,6 +2,8 @@
 
 Flightcontroller firmware for a custom ESP32S3-N8R8 embedded board, ICM-20948, LPS25HBTR. PCB Gerber files are also within this repo and are easily reproducable.
 
+Info Document [here](https://docs.google.com/document/d/1mX9GRuzyko-Ee7_DHJvfnAwM2Fita9zQ-YIju0DpfQU/edit?usp=sharing).
+
 <p align="center">
   <img src="photos/pcbimage.jpeg" width="650">
 </p>
