@@ -1,6 +1,6 @@
 # Astra Firmware v1.0.0 for the Rev 5-5 Board
 
-Flightcontroller firmware for a custom ESP32S3-N8R8 embedded board, ICM-20948, LPS25HBTR. PCB Gerber files are also within this repo and are easily reproducable.
+Flightcontroller firmware for a custom ESP32S3-N8R8 embedded board, ICM-20948, LPS25HBTR, And Controller. PCB Gerber files are also within this repo and are easily reproducable.
 
 Info Document [here](https://docs.google.com/document/d/1mX9GRuzyko-Ee7_DHJvfnAwM2Fita9zQ-YIju0DpfQU/edit?usp=sharing).
 
@@ -8,7 +8,7 @@ Info Document [here](https://docs.google.com/document/d/1mX9GRuzyko-Ee7_DHJvfnAw
   <img src="photos/pcbimage.jpeg" width="650">
 </p>
 
-# Hardware
+# Flight Controller Hardware
 
 * ESP32-S3 Module
 * LDO
@@ -18,6 +18,13 @@ Info Document [here](https://docs.google.com/document/d/1mX9GRuzyko-Ee7_DHJvfnAw
 * Fully Custom PCB
 * Couple Resistors, Capacitors, Buttons and 2.54mm Pin Headers
 * Usb-C 2.0 Port
+
+# Controller Hardware
+* ESP32-C3-Supermini
+* Joystick
+* 3 Pushbuttons
+* Potentiometer
+* Custom PCB
 
 ### PCB Layout
 
@@ -46,28 +53,30 @@ Rev 5.5 PCB layout designed in KiCad for the ESP32-S3, IMU, barometer, power reg
 
 ```bash
 .
-├── src/            # Main application code
-├── include/        # Header files
-├── lib/            # Custom libraries/modules
-├── test/           # Unit tests (optional)
+├── src/            # Main code
+├── include/        # Empty
+├── lib/            # Empty
+├── test/           # Empty
 ├── platformio.ini  # Build configuration
 ├── README.md
-└── Gerber.zip      # Gerber files for PCB production
+├── Gerber.zip      # Gerber files for PCB production
+└── controller/     # Firmware for the controller itself
 ```
 
 ---
 
 # Controls
-
-* L2 / R2 (analog triggers) → Throttle
-* Left Stick → Pitch
-* R1/L1 Yaw
-* A -> Arm Motors
-* B -> Disarm Motors
+Not really full designed as of yet but currently
+The buttons are for Holding, Traversing the Controller Screen, and Arming/Disarming.
+Potentiometer for height when held.
+joystick for x,y movement.
 
 ---
 
 # Getting Started
+
+### 0. Building the Hardware
+Order the gerber files from JLCPCB or an equivilant. Solder the hardware together (Guide not yet made).
 
 ### 1. Clone the repository
 
@@ -78,21 +87,13 @@ cd astra-1
 
 ### 2. Build the project
 
-```bash
-pio run
-```
+Use PlatformIO vscode extention to build the project
 
 ### 3. Upload to ESP32-S3-N8R8
+Use PlatformIO vscode extention to upload directly to the ESP32.
 
-```bash
-pio run --target upload
-```
-
-### 4. Pair controller
-
-* Power on your controller
-* Pair via Bluetooth 
-* Ensure connection before arming motors
+### 4. Upload to the ESP32-C3-Supermini
+Use the Arduino IDE to to compile and upload directly to the esp32.
 
 ---
 
