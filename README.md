@@ -54,9 +54,6 @@ Rev 5.5 PCB layout designed in KiCad for the ESP32-S3, IMU, barometer, power reg
 ```bash
 .
 ├── src/            # Main code
-├── include/        # Empty
-├── lib/            # Empty
-├── test/           # Empty
 ├── platformio.ini  # Build configuration
 ├── README.md
 ├── Gerber.zip      # Gerber files for PCB production
